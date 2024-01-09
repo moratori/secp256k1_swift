@@ -3,10 +3,10 @@
 import PackageDescription
 
 let package = Package(
-    name: "secp256k1.swift",
+    name: "secp256k1_swift",
     products: [
         // WARNING: These APIs should not be considered stable and may change at any time.
-        .library(name: "secp256k1", targets: ["secp256k1"]),
+        .library(name: "secp256k1_swift", targets: ["secp256k1_swift"]),
         .library(name: "zkp", targets: ["zkp"])
     ],
     dependencies: [
@@ -16,7 +16,7 @@ let package = Package(
         .package(url: "https://github.com/realm/SwiftLint.git", exact: "0.52.4")
     ],
     targets: [
-        .target(name: "secp256k1", dependencies: ["secp256k1_bindings"]),
+        .target(name: "secp256k1_swift", dependencies: ["secp256k1_bindings"]),
         .target(name: "zkp", dependencies: ["zkp_bindings"]),
         .target(
             name: "secp256k1_bindings",

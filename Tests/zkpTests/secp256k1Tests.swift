@@ -1,7 +1,7 @@
 #if canImport(zkp)
     @testable import zkp
 #else
-    @testable import secp256k1
+    @testable import secp256k1_swift
 #endif
 
 import XCTest
